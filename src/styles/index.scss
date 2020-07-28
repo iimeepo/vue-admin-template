@@ -1,0 +1,131 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+// main-container global css
+
+.app-main {
+  background: #f0f2f5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .app-container {
+    padding: 20px;
+    margin: 20px;
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 90px);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .filter-container {
+      padding-bottom: 10px;
+    
+      .filter-item {
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 10px;
+      }
+    }
+
+    .el-table::before {
+      content: none;
+    }
+
+    .el-table__fixed::before {
+      content: none;
+    }
+
+    .el-table__fixed-right::before {
+      content: none;
+    }
+
+    .el-input-number--small {
+      width: 180px;
+    }
+
+    .form-container {
+      width: 100%;
+      height: calc(100vh - 130px);
+      display: flex;
+      flex-direction: column;
+
+      .form-container-header {
+        height: 40px;
+        line-height: 40px;
+        background: #ffffff;
+      }
+
+      .form-container-body {
+        flex: 1;
+        overflow: auto;
+      }
+      .form-container-footer {
+        height: 40px;
+        line-height: 40px;
+        background: #ffffff;
+      }
+    }
+  }
+}
