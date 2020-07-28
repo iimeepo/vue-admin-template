@@ -19,7 +19,7 @@
           <a target="_blank" href="https://panjiachen.gitee.io/vue-element-admin-site/zh/">
             <el-dropdown-item>文档</el-dropdown-item>
           </a>
-          <a target="_blank" href="https://github.com/PanJiaChen/vue-admin-template/">
+          <a target="_blank" href="https://github.com/iimeepo/vue-admin-template">
             <el-dropdown-item>Github</el-dropdown-item>
           </a>
           <el-dropdown-item divided @click.native="logout">
