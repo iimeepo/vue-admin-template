@@ -2,7 +2,7 @@
   <div class="dashboard-container">
     <div class="dashboard-editor-container">
       <div>
-        <a href="https://github.com/PanJiaChen/vue-element-admin" target="_blank" class="github-corner" aria-label="View source on Github">
+        <a href="https://gitee.com/iimeepo/vue-admin-template" target="_blank" class="github-corner" aria-label="View source on Github">
           <svg
             width="80"
             height="80"
