@@ -212,7 +212,6 @@
       :visible.sync="dialogVisible"
       width="960px"
       destroy-on-close
-      append-to-body
       :title="dialogType === 'modify' ? '修改' : '新增'"
     >
       <el-form
