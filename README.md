@@ -58,5 +58,4 @@ npm run lint -- --fix
 
 ## License
 
-[MIT](https://github.com/iimeepo/vue-admin-template/blob/master/LICENSE) license.
 [MIT](https://gitee.com/iimeepo/vue-admin-template/blob/master/LICENSE) license.
