@@ -74,8 +74,7 @@ div:focus {
     background: #ffffff;
     border-radius: 4px;
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
-    height: calc(100vh - 90px);
-    flex: 1;
+    height: calc(100vh - 50px - 35px - 40px);
     display: flex;
     flex-direction: column;
 
@@ -87,6 +86,10 @@ div:focus {
         vertical-align: middle;
         margin-bottom: 10px;
       }
+    }
+
+    .table-container {
+      width: 100%;
     }
 
     .el-table::before {
@@ -107,7 +110,7 @@ div:focus {
 
     .form-container {
       width: 100%;
-      height: calc(100vh - 130px);
+      height: calc(100vh - 50px - 35px - 80px);
       display: flex;
       flex-direction: column;
 

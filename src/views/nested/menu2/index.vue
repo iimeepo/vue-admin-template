@@ -1,5 +1,14 @@
 <template>
-  <div style="padding:30px;">
-    <el-alert :closable="false" title="二级菜单" />
+  <div class="app-container">
+    二级菜单2
   </div>
 </template>
+
+<script>
+
+export default {
+  data() {
+    return {}
+  }
+}
+</script>

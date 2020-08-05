@@ -53,15 +53,21 @@ export default {
   & .sidebar-logo-link {
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     & .sidebar-logo {
       width: 32px;
       height: 32px;
-      vertical-align: middle;
-      margin-right: 12px;
+      margin: 0 6px;
     }
 
     & .sidebar-title {
+      flex: 1;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
       display: inline-block;
       margin: 0;
       color: #fff;
@@ -75,7 +81,22 @@ export default {
 
   &.collapse {
     .sidebar-logo {
-      margin-right: 0px;
+      margin: 0px;
+    }
+  }
+}
+
+.mobile {
+  .sidebarLogoFade-enter-active {
+    transition: none;
+  }
+
+  .sidebar-logo-container {
+    .sidebar-logo {
+      margin: 0 !important;
+    }
+    .sidebar-title {
+      display: none;
     }
   }
 }
