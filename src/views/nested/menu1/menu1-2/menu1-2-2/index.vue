@@ -1,5 +1,14 @@
-<template functional>
-  <div style="padding:30px;">
-    <el-alert :closable="false" title="四级菜单" type="warning" />
+<template>
+  <div class="app-container">
+    四级菜单2
   </div>
 </template>
+
+<script>
+
+export default {
+  data() {
+    return {}
+  }
+}
+</script>

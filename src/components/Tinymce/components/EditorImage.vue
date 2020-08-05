@@ -12,7 +12,7 @@
         :on-success="handleSuccess"
         :before-upload="beforeUpload"
         class="editor-slide-upload"
-        action="https://httpbin.org/post"
+        :action="uploadUrl"
         list-type="picture-card"
       >
         <el-button size="small" type="primary">
@@ -43,6 +43,7 @@ export default {
   data() {
     return {
       dialogVisible: false,
+      uploadUrl: '',
       listObj: {},
       fileList: []
     }
@@ -84,6 +85,10 @@ export default {
       }
     },
     beforeUpload(file) {
+      if (!this.uploadUrl) {
+        this.$message.error('请设置正确的图片上传地址!')
+        return false
+      }
       const _self = this
       const _URL = window.URL || window.webkitURL
       const fileName = file.uid

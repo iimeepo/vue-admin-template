@@ -24,42 +24,26 @@ function loopCreateRouter(routes) {
     if (tmp['children']) {
       tpl['children'] = loopCreateRouter(tmp['children'])
     }
-    // const tpl = {}
-    // Object.assign({}, tmp)
-    /* tpl['name'] = tmp['name']
-    tpl['path'] = tmp['path']
-    tpl['hidden'] = tmp['hidden']
-    if (typeof tmp['component'] !== 'undefined' && tmp['component']) {
-      if (tmp['component'] === 'Layout') {
-        tpl['component'] = Layout
-      } else {
-        tpl['component'] = resolve => require([`../../${tmp['component']}.vue`], resolve)
-      }
-    }
-    if (typeof tmp['redirect'] !== 'undefined') {
-      tpl['redirect'] = tmp['redirect']
-    }
-    if (typeof tmp['alwaysShow'] !== 'undefined') {
-      tpl['alwaysShow'] = tmp['alwaysShow']
-    }
-    if (typeof tmp['meta'] !== 'undefined') {
-      tpl['meta'] = tmp['meta']
-    }
-    if (tmp['children']) {
-      tpl['children'] = loopCreateRouter(tmp['children'])
-    } */
     res.push(tpl)
   })
   return res
 }
 
 const state = {
-  routes: []
+  routes: [],
+  second_routes: [],
+  third_routes: []
 }
 
 const mutations = {
   SET_ROUTES: (state, routes) => {
     state.routes = routes
+  },
+  SET_SECOND_ROUTES: (state, routes) => {
+    state.second_routes = routes
+  },
+  SET_THIRD_ROUTES: (state, routes) => {
+    state.third_routes = routes
   }
 }
 
@@ -77,6 +61,34 @@ const actions = {
         reject(error)
       })
     })
+  },
+  changeSecondRoutes({ commit, state }, data) {
+    commit('SET_SECOND_ROUTES', [])
+    const second_routes = state.routes.find(item => {
+      return !item.hidden && (item.path === data.path || (data.path === '' && item.path === '/'))
+    })
+    if (typeof second_routes !== 'undefined' && second_routes.children) {
+      const res = second_routes.children.filter(item => {
+        return !item.hidden && item.path
+      })
+      if (res.length > 1) {
+        commit('SET_SECOND_ROUTES', res)
+      }
+    }
+  },
+  changeThirdRoutes({ commit, state }, data) {
+    commit('SET_THIRD_ROUTES', [])
+    const third_routes = state.second_routes.find(item => {
+      return !item.hidden && (item.path === data.path || (data.path === '' && item.path === '/'))
+    })
+    if (typeof third_routes !== 'undefined' && third_routes.children) {
+      const res = third_routes.children.filter(item => {
+        return !item.hidden && item.path
+      })
+      if (res.length > 1) {
+        commit('SET_THIRD_ROUTES', res)
+      }
+    }
   }
 }
 
