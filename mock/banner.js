@@ -20,7 +20,7 @@ module.exports = [
       const _list = items.filter((val) => {
         let flag = true
         if (typeof keyword !== 'undefined' && flag) {
-          flag = val.title.indexOf(keyword) !== -1 || val.name.indexOf(keyword) !== -1
+          flag = val.title.indexOf(keyword) !== -1
         }
         return flag
       })

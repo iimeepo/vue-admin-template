@@ -59,6 +59,14 @@ div:focus {
   }
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
 // main-container global css
 
 .app-main {
@@ -67,6 +75,10 @@ div:focus {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+
+  .w-200 {
+    width: 200px;
+  }
 
   .app-container {
     padding: 20px;
@@ -82,9 +94,13 @@ div:focus {
       padding-bottom: 10px;
     
       .filter-item {
-        display: inline-block;
+        display: inline-flex;
         vertical-align: middle;
         margin-bottom: 10px;
+
+        +.filter-item {
+          margin-left: 10px;
+        }
       }
     }
 
@@ -131,4 +147,28 @@ div:focus {
       }
     }
   }
+}
+
+.mobile {
+  .app-main {
+    .w-200 {
+      width: 100%;
+    }
+    .app-container {
+      .filter-container {
+        .filter-item {
+          margin-left: 0;
+          &.el-date-editor.el-range-editor.el-input__inner.el-date-editor--datetimerange {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .el-dialog {
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+
 }

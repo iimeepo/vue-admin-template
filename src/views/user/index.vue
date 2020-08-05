@@ -9,7 +9,7 @@
         start-placeholder="开始日期"
         end-placeholder="结束日期"
         value-format="yyyy-MM-dd HH:mm:ss"
-        style="margin-bottom: 10px;vertical-align: middle;"
+        class="filter-item"
         :editable="false"
       />
       <el-select
@@ -18,7 +18,6 @@
         placeholder="选择状态"
         clearable
         class="filter-item"
-        style="width: 110px;margin-left: 10px;"
       >
         <el-option label="正常" :value="1" />
         <el-option label="禁用" :value="0" />
@@ -28,13 +27,11 @@
         size="small"
         placeholder="请输入关键词"
         clearable
-        class="filter-item"
-        style="width: 200px;margin-left: 10px;"
+        class="filter-item w-200"
       />
-      <el-button-group style="margin-left: 10px;">
+      <el-button-group class="filter-item">
         <el-button
           size="small"
-          class="filter-item"
           type="primary"
           icon="el-icon-search"
           @click="search"
@@ -43,24 +40,21 @@
         </el-button>
         <el-button
           size="small"
-          class="filter-item"
           type="primary"
           icon="el-icon-refresh"
           @click="refresh"
         >
           重置
         </el-button>
+        <el-button
+          size="small"
+          type="primary"
+          icon="el-icon-plus"
+          @click="add"
+        >
+          新增
+        </el-button>
       </el-button-group>
-      <el-button
-        size="small"
-        class="filter-item"
-        type="primary"
-        icon="el-icon-plus"
-        style="margin-left: 10px;"
-        @click="add"
-      >
-        新增
-      </el-button>
     </div>
 
     <el-table
@@ -237,7 +231,7 @@
           </el-radio-group>
         </el-form-item>
       </el-form>
-      <div style="text-align:right;">
+      <div class="text-right">
         <el-button type="danger" @click="dialogVisible = false">
           取消
         </el-button>
