@@ -5,6 +5,7 @@
       v-loading="listLoading"
       :model="temp"
       label-width="120px"
+      :label-position="labelObj"
     >
       <div class="form-container">
         <div class="form-container-body">
@@ -104,6 +105,11 @@ export default {
       loading: false,
       uploadUrl: '',
       temp: Object.assign({}, _temp)
+    }
+  },
+  computed: {
+    labelObj() {
+      return this.$store.state.app.device === 'mobile' ? 'top' : 'right'
     }
   },
   created() {

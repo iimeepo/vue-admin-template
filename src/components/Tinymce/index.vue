@@ -77,6 +77,9 @@ export default {
         return `${width}px`
       }
       return width
+    },
+    device() {
+      return this.$store.state.app.device
     }
   },
   watch: {
@@ -120,9 +123,9 @@ export default {
         height: this.height,
         body_class: 'panel-body ',
         object_resizing: false,
-        toolbar: this.toolbar.length > 0 ? this.toolbar : toolbar,
-        menubar: this.menubar,
-        plugins: plugins,
+        toolbar: this.device === 'mobile' ? [] : (this.toolbar.length > 0 ? this.toolbar : toolbar),
+        menubar: this.device === 'mobile' ? [] : this.menubar,
+        plugins: this.device === 'mobile' ? [] : plugins,
         end_container_on_empty_block: true,
         powerpaste_word_import: 'clean',
         code_dialog_height: 450,
@@ -243,5 +246,15 @@ export default {
 
 .editor-upload-btn {
   display: inline-block;
+}
+
+::v-deep .mce-container.mce-flow-layout-item.mce-first.mce-last.mce-btn-group {
+  white-space: normal;
+  div {
+    white-space: normal;
+  }
+}
+::v-deep div.mce-edit-area {
+  border-width: 1px 1px 0px 0px !important;
 }
 </style>

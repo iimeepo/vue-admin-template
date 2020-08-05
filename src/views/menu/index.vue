@@ -142,7 +142,7 @@
           </el-radio-group>
         </el-form-item>
       </el-form>
-      <div style="text-align:right;">
+      <div class="text-right">
         <el-button type="danger" @click="dialogVisible = false">
           取消
         </el-button>

@@ -77,7 +77,7 @@ const routes = [
   {
     path: '/nested',
     component: 'Layout',
-    redirect: '/nested/menu2',
+    redirect: '/nested/menu1',
     name: 'Nested',
     meta: {
       title: '多级菜单',
