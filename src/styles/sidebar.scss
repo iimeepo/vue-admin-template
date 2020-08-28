@@ -48,8 +48,9 @@
   .main-container {
     padding-top: 50px;
     min-height: calc(100% - 50px);
-    transition: margin-left .28s;
+    // transition: margin-left .28s;
     position: relative;
+    overflow: hidden;
 
     &.sidebarLeft {
       margin-left: $sideBarWidth;
