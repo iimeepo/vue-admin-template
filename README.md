@@ -5,6 +5,7 @@
 ## Demo
 
 线上预览: [http://vue-admin.findfuture.cn/](http://vue-admin.findfuture.cn/)
+完整版本：[http://admin.qutaoyun.com/](http://admin.qutaoyun.com/) 正在开发中...
 
 ## 构建
 
