@@ -1,23 +1,24 @@
 {
   "name": "vue-admin-template",
-  "version": "4.4.0",
+  "version": "1.0.0",
   "description": "A vue admin template with Element UI & axios & iconfont & permission control & lint",
   "author": "Pan <panfree23@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "dev": "vue-cli-service serve",
     "build:prod": "vue-cli-service build",
     "build:stage": "vue-cli-service build --mode staging",
     "preview": "node build/index.js --preview",
-    "svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml",
     "lint": "eslint --ext .js,.vue src",
     "test:unit": "jest --clearCache && vue-cli-service test:unit",
-    "test:ci": "npm run lint && npm run test:unit"
+    "test:ci": "npm run lint && npm run test:unit",
+    "svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml"
   },
   "dependencies": {
     "axios": "1.6.0",
     "core-js": "3.6.5",
     "echarts": "^4.8.0",
-    "element-ui": "2.13.2",
+    "element-ui": "2.15.14",
     "js-cookie": "2.2.0",
     "normalize.css": "7.0.0",
     "nprogress": "0.2.0",
@@ -51,13 +52,12 @@
     "svgo": "1.2.2",
     "vue-template-compiler": "2.6.10"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
   "engines": {
     "node": ">=8.9",
     "npm": ">= 3.0.0"
   },
-  "license": "MIT"
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }
