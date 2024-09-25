@@ -12,6 +12,10 @@
 github地址: [https://github.com/PanJiaChen/tinymce-all-in-one/](https://github.com/PanJiaChen/tinymce-all-in-one/)  
 如果访问太慢可以自行下载存放到自己的cdn站点，引入访问地址即可
 
+## 部署文档地址
+
+[https://1m2911lzp6.k.topthink.com/@vue-admin-template/huanjing.html](https://1m2911lzp6.k.topthink.com/@vue-admin-template/huanjing.html)
+
 ## 构建
 
 ```bash
