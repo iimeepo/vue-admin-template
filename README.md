@@ -6,6 +6,12 @@
 
 线上预览: [http://vue-admin.findfuture.cn/](http://vue-admin.findfuture.cn/)  
 
+
+## Tinymce 编辑器
+
+github地址: [https://github.com/PanJiaChen/tinymce-all-in-one/](https://github.com/PanJiaChen/tinymce-all-in-one/)  
+如果访问太慢可以自行下载存放到自己的cdn站点，引入访问地址即可
+
 ## 构建
 
 ```bash
