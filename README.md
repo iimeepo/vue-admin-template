@@ -65,7 +65,7 @@ npm run lint -- --fix
 
 ## QQ交流群
 
-![](https://93nrlzrndo.x.topthink.com/asset/qrcode_1727312377597.jpg)
+![QQ交流群](https://lfs.k.topthink.com/lfs/6687f1ba8194003627e696b52f195c727c3f6e4a1b7fd3d6d723d5f234bf5a3c.dat)
 
 ## License
 
