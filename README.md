@@ -63,6 +63,10 @@ npm run lint
 npm run lint -- --fix
 ```
 
+## QQ交流群
+
+![](https://93nrlzrndo.x.topthink.com/asset/qrcode_1727312377597.jpg)
+
 ## License
 
 [MIT](https://gitee.com/iimeepo/vue-admin-template/blob/master/LICENSE) license.
